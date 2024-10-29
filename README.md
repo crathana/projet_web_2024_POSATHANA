@@ -13,10 +13,29 @@ Aéroport débloqué avec le billet (2 choix: partir au Cambodge direct ou Passe
 
 PARIS:
 
-Il arrive à Paris et à pour objectif de trouver le translator (technologie de pointe).
+Il arrive à Paris et à pour objectif de trouver le translator (technologie de pointe). Traducteur a Scalay, sauf que nloqué par un code. 
 
-je teste de push 
-on est en ble-ssem
+Pur attraper le code, il faut cliquer sur els monuments parisiens. 
+
+Ordre du code:  sens de la Seine, poeme avec majuscules...
+
+une fois qu'il a le code, road to cambodge.
+
+CAMBODGE: 
+
+Objectif: aller chercher le riz.
+
+Arriver a la ville de Battambang -> Passer par angkor Vat
+
+Angkor Vat: Va chercher canne a peche, puis clique sur canne a peche puis tonle sap pour pecher des poissons into battambang debloque
+
+BATTAMBANG
+
+Echange Riz contre poisson
+
+Débloque l'aéroport-> Go to valence, clique sur resto puis fin du jeu 
+
+
 
 
 
