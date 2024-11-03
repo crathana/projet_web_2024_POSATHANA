@@ -1,7 +1,7 @@
 Vue.createApp({
     data() {
         return {
-            seconds: 0, // Initialiser le compteur de secondes
+            seconds: 0, 
             map: null,
             inventoryActive: false,
             objects: [] 
@@ -19,19 +19,19 @@ Vue.createApp({
             this.inventoryActive = !this.inventoryActive;
         },
         loadObjects() {
-            // Récupérer les objets depuis l'API
+            
             fetch('/api/objets')
                 .then(response => response.json())
                 .then(data => {
                     if (data.objets) {
                         data.objets.forEach(objet => {
-                            // Extraire latitude et longitude
+                            
                             const lat = objet.geojson.coordinates[1];
                             const lng = objet.geojson.coordinates[0];
-                            const imagePath = objet.chemin_image; // Assure-toi que c'est le bon nom de colonne
-                            const zoomLevel = objet.niveau_zoom; // Idem
-                            const width = objet.largeur; // Idem
-                            const height = objet.hauteur; // Idem
+                            const imagePath = objet.chemin_image; 
+                            const zoomLevel = objet.niveau_zoom; 
+                            const width = objet.largeur; 
+                            const height = objet.hauteur; 
         
                             const imageDiv = L.divIcon({
                                 className: 'custom-image',
@@ -41,7 +41,7 @@ Vue.createApp({
                                 iconSize: [width, height]
                             });
     
-                            // Créer un marqueur pour l'image
+                            
                             const marker = L.marker([lat, lng], { icon: imageDiv });
     
                             // Ajouter le marqueur à la carte au début
@@ -75,15 +75,15 @@ Vue.createApp({
         },
         
         initializeMap() {
-            // Initialiser la carte et définir son centre et son niveau de zoom
+            
             this.map = L.map('map').setView([39.46, -0.3763], 13);
-            // Ajouter une couche de tuiles OpenStreetMap
+            
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(this.map);
 
-            // Ajouter l'événement zoomend pour appeler toggleMarkers
+            
             this.map.on('zoomend', this.toggleMarkers);
         }
     },
@@ -92,9 +92,9 @@ Vue.createApp({
         this.loadObjects();
         setInterval(() => {
             this.seconds++;
-        }, 1000); // Incrémente toutes les secondes
+        }, 1000);
     }
-}).mount('body'); // Monte l'application sur l'élément #app
+}).mount('body'); 
 
 
 
