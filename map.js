@@ -1,15 +1,10 @@
-// Initialiser la carte et définir son centre et son niveau de zoom
-var map = L.map('map').setView([39.46, -0.3763], 13);
-// Ajouter une couche de tuiles OpenStreetMap
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
 Vue.createApp({
     data() {
         return {
-            seconds: 0 // Initialiser le compteur de secondes
+            seconds: 0, // Initialiser le compteur de secondes
+            map: null,
+            inventoryActive: false,
+            objects: [] 
         };
     },
     computed: {
@@ -19,23 +14,87 @@ Vue.createApp({
             return `${String(minutes).padStart(2, '0')}:${String(displaySeconds).padStart(2, '0')}`;
         }
     },
+    methods: {
+        toggleInventory() {
+            this.inventoryActive = !this.inventoryActive;
+        },
+        loadObjects() {
+            // Récupérer les objets depuis l'API
+            fetch('/api/objets')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.objets) {
+                        data.objets.forEach(objet => {
+                            // Extraire latitude et longitude
+                            const lat = objet.geojson.coordinates[1];
+                            const lng = objet.geojson.coordinates[0];
+                            const imagePath = objet.chemin_image; // Assure-toi que c'est le bon nom de colonne
+                            const zoomLevel = objet.niveau_zoom; // Idem
+                            const width = objet.largeur; // Idem
+                            const height = objet.hauteur; // Idem
+        
+                            const imageDiv = L.divIcon({
+                                className: 'custom-image',
+                                html: `<div style="width: ${width}px; height: ${height}px;">
+                                           <img src="${imagePath}" style="width: 100%; height: 100%;">
+                                       </div>`,
+                                iconSize: [width, height]
+                            });
+    
+                            // Créer un marqueur pour l'image
+                            const marker = L.marker([lat, lng], { icon: imageDiv });
+    
+                            // Ajouter le marqueur à la carte au début
+                            marker.addTo(this.map);
+    
+                            // Stocker l'objet et son niveau de zoom
+                            this.objects.push({ marker, zoomLevel });
+                        });
+                        this.toggleMarkers();
+                    }
+                })
+                
+        },
+        
+        toggleMarkers() {
+            const currentZoom = this.map.getZoom(); // Obtient le niveau de zoom actuel
+            this.objects.forEach(obj => {
+                const { marker, zoomLevel } = obj;
+                if (currentZoom >= zoomLevel) {
+                    // Ajouter le marqueur à la carte si le niveau de zoom est suffisant
+                    if (!this.map.hasLayer(marker)) {
+                        marker.addTo(this.map);
+                    }
+                } else {
+                    // Supprimer le marqueur de la carte si le niveau de zoom n'est pas suffisant
+                    if (this.map.hasLayer(marker)) {
+                        this.map.removeLayer(marker);
+                    }
+                }
+            });
+        },
+        
+        initializeMap() {
+            // Initialiser la carte et définir son centre et son niveau de zoom
+            this.map = L.map('map').setView([39.46, -0.3763], 13);
+            // Ajouter une couche de tuiles OpenStreetMap
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(this.map);
+
+            // Ajouter l'événement zoomend pour appeler toggleMarkers
+            this.map.on('zoomend', this.toggleMarkers);
+        }
+    },
     mounted() {
+        this.initializeMap();
+        this.loadObjects();
         setInterval(() => {
             this.seconds++;
         }, 1000); // Incrémente toutes les secondes
     }
-}).mount('#app'); // Monte l'application sur l'élément #app
-
- 
-
-const inventory = document.getElementById('inventory');
-    const inventoryPanel = document.getElementById('inventoryPanel');
-    const closeButton = document.getElementById('closeButton');
-
-    inventory.addEventListener('click', function() {
-        inventoryPanel.classList.toggle('active'); // Ouvre ou ferme le panneau d'inventaire
-    });
-
+}).mount('body'); // Monte l'application sur l'élément #app
 
 
 

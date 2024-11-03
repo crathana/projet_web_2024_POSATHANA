@@ -33,13 +33,15 @@
     
 
     <!-- Conteneur pour la carte -->
+    <!--<div id="map"></div>--> 
+
+    
     <div id="map"></div>
+    
+    <div @click="toggleInventory" class="inventory">Inventaire</div>
 
-    <div id="inventory" class="inventory">
-    <span>Inventaire</span>
-    </div>
-
-    <div id="inventoryPanel" class="inventory-panel">
+<!-- Barre d'inventaire cachée au départ -->
+<div class="inventoryPanel" :class="{ active: inventoryActive }"></div>
      
     <!-- Librairie Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
