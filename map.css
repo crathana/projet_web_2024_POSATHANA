@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%; /* Assurer que le corps et html occupent 100% de la hauteur */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+#header {
+    background-color: #d63d3d; /* Couleur de fond du bandeau */
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Espacement autour du texte */
+    width: 100%; /* Prendre toute la largeur */
+    position: relative; /* Position normale */
+    z-index: 1000; /* S'assurer qu'il soit au-dessus de la carte */
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Aligner verticalement au centre */
+}
+
+h1 {
+    flex: 1; /* Permettre au titre de prendre tout l'espace disponible */
+    text-align: center; /* Centrer le texte */
+    margin: 0; /* Enlever la marge par défaut */
+}
+
+.timer {
+    font-size: 1.2em; /* Taille du texte du timer */
+    margin-right: 20px; /* Espacement à droite */
+}
+
+.pseudo{
+    font-size: 1.2em;
+}
+
+.cheat-label {
+    color: white; /* Couleur du texte pour "Triche" */
+    display: flex; /* Utiliser flex pour aligner la case et le texte */
+    align-items: center; /* Aligner verticalement au centre */
+    font-size: 1.2em;
+}
+
+.cheat-checkbox {
+    margin-right: 5px; /* Espacement à droite de la case à cocher */
+}
+
+
+#map {
+    height: calc(100% - 80px); /* Hauteur de la carte : 100% moins la hauteur du bandeau */
+    width: 100%; /* Largeur complète */
+}
+
+/* Styles pour le carré d'inventaire */
+#inventory {
+    position: fixed;
+    bottom: 0px; /* Distance du bas de l'écran */
+    left: 0px; /* Distance de gauche */
+    background-color: #d63d3d; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    width: 130px; /* Largeur du carré */
+    height: 130px; /* Hauteur du carré */
+    display: flex; /* Utiliser Flexbox pour centrer le texte */
+    align-items: center; /* Alignement vertical du texte */
+    justify-content: center; /* Alignement horizontal du texte */
+    border-radius: 0px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en main pour indiquer un clic */
+    z-index: 1000; /* S'assurer qu'il soit au-dessus de la carte */
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Ombre pour donner du relief */
+}
+
+.inventory-panel {
+    position: fixed;
+    bottom: 0; /* Positionner en bas de la page */
+    left: 0; /* Positionner à gauche */
+    width: 100%; /* Largeur complète */
+    height: 130px;
+    background-color: #ffffff; /* Couleur de fond */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.5); /* Ombre pour donner du relief */
+    transform: translateY(100%); /* Commencer en dehors de l'écran */
+    transition: transform 0.3s ease; /* Animation de transition */
+    z-index: 999; /* Sous le carré d'inventaire */
+}
+
+.inventory-panel.active {
+    transform: translateY(0); /* Amener le panneau en vue */
+}
+
+
+
+
