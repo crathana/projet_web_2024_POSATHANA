@@ -71,8 +71,8 @@ h1 {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     background-color: #d63d3d;
     color: white;
     display: flex;
@@ -102,7 +102,7 @@ h1 {
 
 /* Classe active pour afficher l'inventaire */
 .inventoryPanel.active {
-    height: 150px; /* Hauteur visible lorsqu'il est actif */
+    height: 130px; /* Hauteur visible lorsqu'il est actif */
     
 }
 
