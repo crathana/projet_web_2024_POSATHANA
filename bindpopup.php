@@ -53,3 +53,9 @@ this.marker[17].bindPopup(
     <p><strong> Opéra Garnier</strong> </p>
     <p> Il a été construit avec ... types différents de marbre !</p>  
 )
+
+this.markers[20].bindPopup(`
+    <p><strong> Aéroport de Phnom Penh</strong> </p>
+
+    <p><strong> Bora: </strong>សួស្តី យើងកំពុងរង់ចាំអ្នក។ ខ្ញុំឈ្មោះ បូរ៉ា ជាអ្នកស្រែ។ ម្យ៉ាងវិញទៀត អ្នកមិនមានអ្នកបកប្រែទេ? វានឹងពិបាកយល់</p>  
+`);
