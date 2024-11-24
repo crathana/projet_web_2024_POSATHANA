@@ -2,7 +2,7 @@ Flight::route('GET /classement', function () {
     $conn = Flight::get('db');
     $user = isset($_SESSION['user']) ? $_SESSION['user'] : null;
 
-    // Supprimer les doublons de la base de données
+    // Supprimer les doublons de la base de données (je ne sais pas pourquoi il y en a mais en tout cas je les supprime)
     $deleteQuery = "DELETE FROM joueurs WHERE id NOT IN (SELECT MIN(id) FROM joueurs GROUP BY nom_joueur, temps)";
     pg_query($conn, $deleteQuery);
 
@@ -14,7 +14,7 @@ Flight::route('GET /classement', function () {
         die("Erreur lors de la récupération des joueurs");
     }
 
-    // Récupérer tous les joueurs pour déterminer la position du joueur actuel
+    // Récupérer tous les joueurs pour déterminer la position du joueur qui vient de jouer
     $allPlayersQuery = "SELECT nom_joueur, temps FROM joueurs ORDER BY temps";
     $allPlayersResult = pg_query($conn, $allPlayersQuery);
     $allPlayers = [];
@@ -22,7 +22,7 @@ Flight::route('GET /classement', function () {
         $allPlayers[] = $row;
     }
 
-    // Chercher le temps et le rang du joueur actuel
+    // Chercher le temps et le rang du joueur qui vient de jouer
     $playerRank = null;
     $playerTime = null;
     foreach ($allPlayers as $index => $player) {
@@ -46,7 +46,6 @@ Flight::route('GET /classement', function () {
         $_SESSION['just_played'] = false;
     }
 
-    // Passe les joueurs, le rang, et l'état du jeu à la vue
     Flight::render('classement', [
         'joueurs' => $joueurs,
         'user' => $user,
@@ -59,14 +58,11 @@ Flight::route('GET /classement', function () {
 
 Flight::route('POST /api/finish', function () {
     $conn = Flight::get('db');
-
-    // Récupérer les données JSON envoyées par le frontend
     $data = json_decode(file_get_contents('php://input'), true);
 
     $username = $data['username'];
     $time = $data['time'];
 
-    // Vérifier que les paramètres sont valides
     if (!$username || !$time) {
         Flight::json(['error' => 'Paramètres invalides'], 400);
         return;
@@ -86,14 +82,12 @@ Flight::route('POST /api/finish', function () {
             $updateQuery = "UPDATE joueurs SET temps = $1 WHERE nom_joueur = $2";
             pg_query_params($conn, $updateQuery, [$time, $username]);
 
-            // Si le temps est mis à jour, renvoyer un message de succès
             /*if ($updateResult) {
                 Flight::json(['success' => true, 'message' => 'Temps amélioré']);
             } else {
                 Flight::json(['error' => 'Erreur lors de la mise à jour du temps'], 500);
             }
         } else {
-            // Même si le temps n'a pas été mis à jour, envoyer une réponse positive
             Flight::json(['success' => true, 'message' => 'Jeu terminé', 'existing_time' => $currentBestTime, 'submitted_time' => $time]);*/
         }
     } else {
