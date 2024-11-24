@@ -59,3 +59,8 @@ this.markers[20].bindPopup(`
 
     <p><strong> Bora: </strong>សួស្តី យើងកំពុងរង់ចាំអ្នក។ ខ្ញុំឈ្មោះ បូរ៉ា ជាអ្នកស្រែ។ ម្យ៉ាងវិញទៀត អ្នកមិនមានអ្នកបកប្រែទេ? វានឹងពិបាកយល់</p>  
 `);
+this.markers[20].bindPopup(`
+    <p><strong> Aéroport de Phnom Penh</strong> </p>
+
+    <p><strong> Bora: </strong>Bonjour je suis Bora, je suis votre fournisseur de riz. Vous trouverez le sac de riz que j'ai stocké dans le temple d'Angkor Wat.</p>  
+`);
