@@ -31,3 +31,37 @@ VALUES ('ciudad', 'images/ciudad.png', ST_SetSRID(ST_MakePoint(-0.35168809960320
 
 INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
 VALUES ('albufera', 'images/albufera.png', ST_SetSRID(ST_MakePoint(-0.35557350252679676, 39.339373314514255), 4326), 150, 150, 15);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('traducteur', 'images/traducteur.png', ST_SetSRID(ST_MakePoint(2.1650446418390157, 48.71246565230332), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('eiffel', 'images/eiffel.png', ST_SetSRID(ST_MakePoint(2.294466145187715, 48.85829909100211), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('invalides', 'images/invalides.png', ST_SetSRID(ST_MakePoint(2.312702153383917, 48.85650308619566), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('notredame', 'images/notredame.png', ST_SetSRID(ST_MakePoint(2.3499641320949265,48.85301814819735), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('arc', 'images/arc.png', ST_SetSRID(ST_MakePoint(2.295015532102536,48.87379582168809), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('louvres', 'images/louvres.png', ST_SetSRID(ST_MakePoint(2.337633119903641, 48.86059907587742), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('concorde', 'images/concorde.png', ST_SetSRID(ST_MakePoint(2.32123616317396, 48.86563291514236), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('pantheon', 'images/pantheon.png', ST_SetSRID(ST_MakePoint(2.3461463608309594, 48.84623479107907), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('sacrecoeur', 'images/sacrecoeur.png', ST_SetSRID(ST_MakePoint(2.343059249782238, 48.88672092373468), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('garnier', 'images/garnier.png', ST_SetSRID(ST_MakePoint(2.3317358689310463, 48.87198356654497), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('cdg', 'images/cdg.png', ST_SetSRID(ST_MakePoint(2.5514822631763883,49.008166299107586), 4326), 100, 100, 1);
+
