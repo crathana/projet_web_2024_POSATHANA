@@ -65,3 +65,9 @@ VALUES ('garnier', 'images/garnier.png', ST_SetSRID(ST_MakePoint(2.3317358689310
 INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
 VALUES ('cdg', 'images/cdg.png', ST_SetSRID(ST_MakePoint(2.5514822631763883,49.008166299107586), 4326), 100, 100, 1);
 
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('aeroport_cambodge', 'images/cdg.png', ST_SetSRID(ST_MakePoint(104.84731480634035,11.54914405354804), 4326), 100, 100, 1);
+
+INSERT INTO Objets (nom, chemin_image, coordonnees, largeur, hauteur, niveau_zoom) 
+VALUES ('riz', 'images/riz.png', ST_SetSRID(ST_MakePoint(103.86688755999845,13.412501119970457 ), 4326), 100, 100, 1);
+
