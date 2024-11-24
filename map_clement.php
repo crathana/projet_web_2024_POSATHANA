@@ -1,0 +1,1 @@
+<button id="finishButton" class="finish-button">Fin du jeu</button>
