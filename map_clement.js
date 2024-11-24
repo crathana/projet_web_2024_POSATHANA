@@ -89,10 +89,9 @@ Vue.createApp({
         },
 
         finishGame() {
-            const time = `00:${this.formattedTime}`; // Temps au format 00:00:00
-            const username = this.username; // Nom de l'utilisateur récupéré depuis PHP
+            const time = `00:${this.formattedTime}`;
+            const username = this.username;
         
-            // Envoyer les données au backend
             fetch('/api/finish', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -104,12 +103,12 @@ Vue.createApp({
                 
                 // Peu importe si le temps est mis à jour ou non, on affiche l'alerte et on redirige
                 alert(`Jeu terminé ! Votre temps: ${time}`);
-                window.location.href = '/classement'; // Redirige vers la page du classement
+                window.location.href = '/classement'; 
             })
             .catch(err => {
                 console.error("Erreur lors de l'appel à l'API : ", err);
                 alert(`Erreur lors de l'enregistrement du temps: ${time}`);
-                window.location.href = '/classement'; // Même redirection en cas d'erreur
+                window.location.href = '/classement';
             });
         }
 
