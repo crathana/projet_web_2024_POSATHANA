@@ -13,15 +13,15 @@ body {
 }
 
 body::before {
-    content: ''; /* Nécessaire pour créer l'élément */
-    position: absolute; /* Positionnement absolu par rapport à body */
+    content: ''; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(150, 18, 18, 0.3); /* Filtre de couleur (ici, noir semi-transparent) */
-    z-index: 1; /* Place le filtre au-dessus de l'image */
-    pointer-events: none; /* Rend le filtre insensible aux interactions */
+    background-color: rgba(150, 18, 18, 0.3);
+    z-index: 1;
+    pointer-events: none;
 }
 .container {
     text-align: center;
