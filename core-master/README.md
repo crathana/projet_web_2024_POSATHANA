@@ -63,7 +63,7 @@ Toutes les coordonnées sont inscritent en (Latitude, Longitude) et en EPSG: 432
 
 - Albufera: (-0.35557350252679676, 39.339373314514255) active -> Ticket: (-0.3517405847089456, 39.34075014058428)
   
-- Clique sur Ticket permet d'avoir le choix entre voyager en France représenté par un drapeau français: (-0.4885363124791955, 39.48486293375731) et voyager au Cambodge représenté par un drapeau cambodgien: (-0.4769363124791955, 39.48486293375731), ici cliquer sur le drapeau cambodgien mène à une impasse.
+- Clique sur Ticket permet d'avoir le choix entre voyager en France représenté par un drapeau français: (-0.4885363124791955, 39.48486293375731) et voyager au Cambodge représenté par un drapeau cambodgien: (-0.4769363124791955, 39.48486293375731), ici cliquer sur le drapeau cambodgien mène à une impasse. NB: On ne sait pas pourquoi mais quand le ticket est cliqué sans qu'on voit l'aéroport sur la carte, les drapeaux ne s'affichent pas et le jeu semble buguer.
   
 - Pour récupérer le Traducteur: (2.1650446418390157, 48.71246565230332), il faut visiter les lieux suivants pour obtenir le code: Invalides: (2.312702153383917, 48.85650308619566), Tour Eiffel: (2.294466145187715, 48.85829909100211), Concorde: (2.32123616317396, 48.86563291514236), Arc de Triomphe: (2.295015532102536,48.87379582168809). Le code du Traducteur est 5564.
   
