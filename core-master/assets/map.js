@@ -225,7 +225,7 @@ Vue.createApp({
                             event.preventDefault(); 
                     
                             const userInput = inputField.value.trim(); 
-                            if (userInput === '5564') { 
+                            if (userInput === '5574') { 
                                 alert('Félicitations, le code est correct ! Le traducteur a été ajouté à votre inventaire');
                                 self.markers[7].setOpacity(0);
                                 self.markers[20].setOpacity(1);
@@ -284,7 +284,7 @@ Vue.createApp({
                     // Concorde
                     this.markers[13].bindPopup(`
                         <p><strong> Place de la Concorde</strong> </p>
-                        <p> Les bassins des fontaines  mesurent environs ... mètres de diamètre.</p> 
+                        <p> Si on fait la somme des numéros de métro qui passent par cette station, on obtient ....</p> 
                     `).addTo(this.map);
                     
                     //Panthéon

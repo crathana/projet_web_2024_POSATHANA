@@ -28,7 +28,7 @@
         <div id="app"><div id="timer" class="timer"> {{ formattedTime }} </div></div>
         <?php if ($user) { ?>
         <div id="pseudo" class = "pseudo"><?= $user; ?></div><?php }?>
-        <h1>A la recherche du riz khmer</h1>
+        <h1>Paëlla Khmere</h1>
         
         <label for="cheatCheckbox" class="cheat-label">
         <input type="checkbox" id="cheatCheckbox" class="cheat-checkbox" @change="toggleWMSLayer">
