@@ -225,7 +225,7 @@ Vue.createApp({
                             event.preventDefault(); 
                     
                             const userInput = inputField.value.trim(); 
-                            if (userInput === '5574') { 
+                            if (userInput === '4574') { 
                                 alert('Félicitations, le code est correct ! Le traducteur a été ajouté à votre inventaire');
                                 self.markers[7].setOpacity(0);
                                 self.markers[20].setOpacity(1);
@@ -260,7 +260,7 @@ Vue.createApp({
                     // Invalides
                     this.markers[9].bindPopup(`
                         <p><strong> Les Invalides</strong> </p>
-                        <p> Cette structure impressionante a été construite en seulement ... ans! </p>  
+                        <p> Cette structure impressionante abrite les sépultures de ... Bonaparte. </p>  
                     `).addTo(this.map);
                     
                     // Notre-Dame
