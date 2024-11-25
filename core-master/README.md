@@ -2,7 +2,7 @@
 
 Dans ce readme vous trouverez quels sont les paramètres à mettre afin de pouvoir lire notre jeu. En seconde partie, vous pourrez trouver la solution aux énigmes.
 
-## Première partie: installations nécessaire
+## Première partie: installations nécessaires
 
 **PostgreSQL:**
 
