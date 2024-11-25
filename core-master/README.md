@@ -57,6 +57,22 @@ Maintenant c'est bon, vous pouvez lancer MAMP. Avant de lancer le server:
 
 Vous pouvez désormais lancer le server et taper http://localhost:7779/ dans votre navigateur web pour jouer.
 
+## Deuxième partie: Solutions des énigmes
+
+Toutes les coordonnées sont inscritent en (Latitude, Longitude) et en EPSG: 4326.
+
+- Albufera: (-0.35557350252679676, 39.339373314514255) active -> Ticket: (-0.3517405847089456, 39.34075014058428)
+  
+- Clique sur Ticket permet d'avoir le choix entre voyager en France représenté par un drapeau français: (-0.4885363124791955, 39.48486293375731) et voyager au Cambodge représenté par un drapeau cambodgien: (-0.4769363124791955, 39.48486293375731), ici cliquer sur le drapeau cambodgien mène à une impasse.
+  
+- Pour récupérer le Traducteur: (2.1650446418390157, 48.71246565230332), il faut visiter les lieux suivants pour obtenir le code: Invalides: (2.312702153383917, 48.85650308619566), Tour Eiffel: (2.294466145187715, 48.85829909100211), Concorde: (2.32123616317396, 48.86563291514236), Arc de Triomphe: (2.295015532102536,48.87379582168809). Le code du Traducteur est 5564.
+  
+- Clique sur l'aeroport à Paris: (2.5514822631763883,49.008166299107586) avec le Traducteur dans l'inventaire envoi au Cambodge.
+  
+- Traduire le texte à l'aéroport du Cambodge: (104.84731480634035,11.54914405354804) débloque le Riz: (103.86688755999845,13.412501119970457).
+  
+- Ramener le Riz en Espagne via clique sur l'aéroport du Cambodge avec le Riz sélectionné dans l'inventaire puis clique sur le Restaurant avec Riz sélectionné dans l'inventaire provoque la fin du jeu.
+  
 
 Merci de votre lecture, amusez-vous bien. 
 By Diego Posado Bañuls et Clement Rathana.
