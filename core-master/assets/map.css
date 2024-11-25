@@ -18,26 +18,26 @@ body {
 
 
 #header {
-    background-color: #d63d3d; 
-    color: white;
-    padding: 20px; 
-    width: 100%; 
-    position: relative; 
-    z-index: 1000; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    background-color: #d63d3d; /* Couleur de fond du bandeau */
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Espacement autour du texte */
+    width: 100%; /* Prendre toute la largeur */
+    position: relative; /* Position normale */
+    z-index: 1000; /* S'assurer qu'il soit au-dessus de la carte */
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Aligner verticalement au centre */
 }
 
 h1 {
-    flex: 1; 
-    text-align: center; 
-    margin: 0; 
+    flex: 1; /* Permettre au titre de prendre tout l'espace disponible */
+    text-align: center; /* Centrer le texte */
+    margin: 0; /* Enlever la marge par défaut */
 }
 
 .timer {
-    font-size: 1.2em; 
-    margin-right: 20px; 
+    font-size: 1.2em; /* Taille du texte du timer */
+    margin-right: 20px; /* Espacement à droite */
 }
 
 .pseudo{
@@ -45,16 +45,18 @@ h1 {
 }
 
 .cheat-label {
-    color: white; 
-    display: flex; 
-    align-items: center; 
+    color: white; /* Couleur du texte pour "Triche" */
+    display: flex; /* Utiliser flex pour aligner la case et le texte */
+    align-items: center; /* Aligner verticalement au centre */
     font-size: 1.2em;
 }
 
 .cheat-checkbox {
-    margin-right: 5px; 
+    margin-right: 5px; /* Espacement à droite de la case à cocher */
 }
 
+
+/* Carte en plein écran */
 #map {
     position: absolute;
     top: 0;
@@ -64,6 +66,7 @@ h1 {
     z-index: 1;
 }
 
+/* Bouton d'inventaire */
 .inventory {
     position: absolute;
     bottom: 0px;
@@ -76,60 +79,34 @@ h1 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 2;
+    z-index: 2; /* Au-dessus de la carte */
     
 }
 
+/* Barre d'inventaire cachée au départ */
 .inventoryPanel {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 0; 
+    height: 0; /* Hauteur à 0 par défaut */
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; 
+    overflow: hidden; /* Masquer le contenu tant qu'il est fermé */
     transition: height 0.3s ease;
-    z-index: 1; 
+    z-index: 1; /* En-dessous du bouton */
 }
 
+/* Classe active pour afficher l'inventaire */
 .inventoryPanel.active {
-    height: 130px; 
+    height: 130px; /* Hauteur visible lorsqu'il est actif */
     
 }
 
-.inventoryItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 10px;
-    text-align: center;
-    color: white;
-}
 
-.inventoryImage {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    
-}
 
-.inventoryItem.selected {
-    
-    padding: 5px;              
-    background-color: #d63d3d; 
-}
-
-.inventoryItem:hover {
-    
-    padding: 5px;  
-    background-color: #2b0e0e;  
-}
 
 
