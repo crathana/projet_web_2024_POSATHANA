@@ -6,22 +6,29 @@ body {
     height: 100vh;
     margin: 0;
     background-image: url('../images/carte.png');
-    background-size: cover;
+    background-size: auto 150%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-color: #995454;
+
+    animation: moveIt 40s linear infinite;
 }
 body::before {
-    content: '';
-    position: absolute;
+    content: ''; /* Nécessaire pour créer l'élément */
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(150, 18, 18, 0.3);
-    z-index: 1;
-    pointer-events: none;
+    background-color: rgba(150, 18, 18, 0.3); /* Filtre de couleur (ici, noir semi-transparent) */
+    z-index: 1; /* Place le filtre au-dessus de l'image */
+    pointer-events: none; /* Rend le filtre insensible aux interactions */
 }
+
+@keyframes moveIt {
+    from {background-position: 0 center;}
+    to {background-position: 100% center;}
+  }
 .container {
     text-align: center;
     background: #ffffff;
@@ -64,4 +71,17 @@ button:hover {
 
 .btn:hover {
     background-color: #b53131; 
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur noire semi-transparente */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    z-index:2 ;
 }

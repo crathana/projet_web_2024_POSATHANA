@@ -40,5 +40,9 @@
     <a href="/">Retour à l'accueil</a>
 </div>
 
+<div class="footer">
+    © 2024 - Diego Posado Bañuls et Clément Rathana - Classe ING2
+</div>
+
 </body>
 </html>
