@@ -443,6 +443,9 @@ Vue.createApp({
     
     mounted() {
 
+        //On récupère le pseudo du joueur
+        this.username = document.getElementById("pseudo").innerText;
+
         // Récupération des tuiles OpenStreetMap et centrage de la carte sur le restaurant
         this.map = L.map('map').setView([39.4699, -0.3763], 13);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
