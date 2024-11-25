@@ -67,8 +67,6 @@ Toutes les coordonnées sont inscritent en (Latitude, Longitude) et en EPSG: 432
   
 - Pour récupérer le Traducteur: (2.1650446418390157, 48.71246565230332), il faut visiter les lieux suivants pour obtenir le code: Invalides: (2.312702153383917, 48.85650308619566), Tour Eiffel: (2.294466145187715, 48.85829909100211), Concorde: (2.32123616317396, 48.86563291514236), Arc de Triomphe: (2.295015532102536,48.87379582168809). Le code du Traducteur est 5564.
   
-- Clique sur l'aeroport à Paris: (2.5514822631763883,49.008166299107586) avec le Traducteur dans l'inventaire envoi au Cambodge.
-  
 - Traduire le texte à l'aéroport du Cambodge: (104.84731480634035,11.54914405354804) débloque le Riz: (103.86688755999845,13.412501119970457).
   
 - Ramener le Riz en Espagne via clique sur l'aéroport du Cambodge avec le Riz sélectionné dans l'inventaire puis clique sur le Restaurant avec Riz sélectionné dans l'inventaire provoque la fin du jeu.
