@@ -284,7 +284,7 @@ Vue.createApp({
                     // Concorde
                     this.markers[13].bindPopup(`
                         <p><strong> Place de la Concorde</strong> </p>
-                        <p> Si on fait la somme des numéros de métro qui passent par cette station, on obtient ....</p> 
+                        <p> Si on fait la somme des numéros de métros qui passent par la station associée, on obtient ....</p> 
                     `).addTo(this.map);
                     
                     //Panthéon
